@@ -5,10 +5,11 @@
 
 require 'bundler'
 Bundler.require
-ActiveRecord::Base.establish_connection(
-  :adapter => 'postgresql',
-  :database => 'db/development.postgresql'
-)
+ActiveRecord::Base.establish_connection
+#(
+  #:adapter => 'postgresql',
+  #:database => 'db/development.postgresql'
+#)
 require_all 'app'
 
 #require('dotenv').config()
