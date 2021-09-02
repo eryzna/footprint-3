@@ -1,6 +1,8 @@
-development:
+default: &default
   adapter: postgresql
   encoding: unicode
-  database: footprint
   pool: 2
-  
+
+development:
+  <<: *default
+  database: footprint
