@@ -1,0 +1,21 @@
+<h2> Edit Activity: <%=@activity.name.titleize%></h2>
+
+<form class="" action="/activities/<%=@activity.id%>" method="post">
+  <input type="hidden" id="hidden" name="_method" value="PATCH">
+  <h4>Activity Type</h4>
+  <input type="radio" name="activity_type" id="commute" value="commute" required> <label for="commute"> Commute </label> </br>
+  <input type="radio" name="activity_type" id="food" value="food" required> <label for="food"> Food </label> </br>
+  <input type="radio" name="activity_type" id="home" value="home"required> <label for="home"> Home </label> </br>
+  <input type="radio" name="activity_type" id="outreach" value="outreach"required> <label for="outreach"> Outreach </label> </br>
+
+  <h4>Length</h4>
+
+  Length (Minutes or Units): <input type="text" name="length" value=""required> </br>
+  <br>
+
+
+  <input type="hidden" name="credits" value="">
+  <input type="submit" name="" value="Submit">
+</form>
+
+ <a href="/users/<%=@current_user.slug%>"> Go Back</a>

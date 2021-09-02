@@ -1,0 +1,16 @@
+<h1> Congrats on Your Activity, <%=@current_user.username%>!</h1>
+
+<h3><%=@activity.name.titleize%></h3>
+
+Activity Type: <%= @activity.activity_type.capitalize%> <br>
+Length: <%=@activity.length%> <br>
+Credits: <%= @activity.credits%>
+
+<form class="" action="/activities/<%=@activity.id%>/delete" method="post">
+  <input type="hidden" id="hidden" name="_method" value="DELETE"> <br>
+  <input type="submit" id="Delete Activity" name="" value="Delete Activity">
+</form>
+
+<h4><a href="/activities/<%=@activity.id%>/edit"> Edit Activity</a>
+  &nbsp;&nbsp; <a href="/users/<%=@current_user.slug%>"> Profile</a>&nbsp;&nbsp;
+  <a href="/activities"> Home</a>&nbsp;&nbsp;<a href="/logout"> Logout</a></h4>
