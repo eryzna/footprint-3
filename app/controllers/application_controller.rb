@@ -13,10 +13,7 @@ class ApplicationController < Sinatra::Base
     erb :'/index'
   end
 
-  get '/estimates/' do
-    "Hello World"
-  end
-
+  
   helpers do
 
     def logged_in?
