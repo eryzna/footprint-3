@@ -63,7 +63,14 @@ function addShippingForm (value) {
 }
 
 function addVehicleForm (value) {
-    console.log(value)
+    select.remove();
+    heading.innerText = value;
+    let fieldOne = document.createElement("input");
+    
+    fieldOne.setAttribute("type", "text");
+    fieldOne.setAttribute("name", "FullName");
+    fieldOne.setAttribute("placeholder", "Full Name");
+    form.appendChild(fieldOne);
 }
 
 function addFuelForm (value) {
