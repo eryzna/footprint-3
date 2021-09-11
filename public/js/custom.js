@@ -30,9 +30,14 @@ function handleChange (value) {
 }
 
 function addElectricityForm(value) {
-    select.remove()
-    heading.innerText = value
-    let fieldOne = document.createElement()
+    select.remove();
+    heading.innerText = value.upcase;
+    let fieldOne = document.createElement("input");
+    
+    fieldOne.setAttribute("type", "text");
+    fieldOne.setAttribute("name", "FullName");
+    fieldOne.setAttribute("placeholder", "Full Name");
+    form.appendChild(fieldOne);
 }
 
 function addFlightForm(value) {
