@@ -31,7 +31,7 @@ function handleChange (value) {
 
 function addElectricityForm(value) {
     select.remove();
-    heading.innerText = value.upcase;
+    heading.innerText = value;
     let fieldOne = document.createElement("input");
     
     fieldOne.setAttribute("type", "text");
@@ -41,7 +41,14 @@ function addElectricityForm(value) {
 }
 
 function addFlightForm(value) {
-    console.log(value)
+    select.remove();
+    heading.innerText = value;
+    let fieldOne = document.createElement("input");
+    
+    fieldOne.setAttribute("type", "text");
+    fieldOne.setAttribute("name", "FullName");
+    fieldOne.setAttribute("placeholder", "Full Name");
+    form.appendChild(fieldOne);
 }
 
 function addShippingForm (value) {
