@@ -1,10 +1,44 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Footprint</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/cover.css" rel="stylesheet">
+   
+  </head>
+
+  <style>
+      li {
+        color: rgba(1, 77, 7, 0.5); 
+        font-size:20px
+      }
+      h3 {
+        color:rgba(1, 77, 7, 0.7)
+      }
+      .btn {
+        background-color: rgba(1, 77, 7, 0)
+      }
+      .btn:hover {
+        background-color: rgba(1, 77, 7, 0.5);
+      }
+      p {
+        font-size: 20px
+      }
+   </style>
+
+
+<main class="px-3">
 <h1> Congrats on Your Activity, <%=@current_user.username%>!</h1>
 
 <h3><%=@activity.name.titleize%></h3>
 
-Activity Type: <%= @activity.activity_type.capitalize%> <br>
-Length: <%=@activity.length%> <br>
-Credits: <%= @activity.credits%>
+<p>Activity Type: <%= @activity.activity_type.capitalize%> </p>
+<p>Length: <%=@activity.length%> </p>
+<p>Credits: <%= @activity.credits%></p>
 
 <form class="" action="/activities/<%=@activity.id%>/delete" method="post">
   <input type="hidden" id="hidden" name="_method" value="DELETE"> <br>
@@ -14,3 +48,4 @@ Credits: <%= @activity.credits%>
 <h4><a href="/activities/<%=@activity.id%>/edit"> Edit Activity</a>
   &nbsp;&nbsp; <a href="/users/<%=@current_user.slug%>"> Profile</a>&nbsp;&nbsp;
   <a href="/activities"> Home</a>&nbsp;&nbsp;<a href="/logout"> Logout</a></h4>
+</main>
